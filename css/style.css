@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+:root {
+    --primary-color: #e4faf4;
+    --secondary-color: #00d09c;
+    --dark-color: #002240;
+    --light-color: #f4f4f4;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+h1,
+h2 {
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+p {
+    margin: 10px 0;
+}
+
+
+/* img {
+    width: 100%;
+} */
+
+
+/* Top-Header Bar */
+
+.top-header-bar .container {
+    padding: 0px;
+}
+
+.top-header-bar {
+    background-color: var(--primary-color);
+    height: 1.5rem;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.top-header-bar select {
+    font-size: 0.7rem;
+    border: none;
+    background: transparent;
+}
+
+.top-header-bar .flex {
+    justify-content: flex-end;
+    align-items: stretch;
+}
+
+.top-header-bar li {
+    margin: 0 10px;
+}
+
+
+/* Nav Bar */
+
+.navbar {
+    margin: 30px 0;
+}
+
+.navbar .flex-item {
+    margin: 0 10px;
+}
+
+.navbar img {
+    max-width: 250px;
+}
+
+.navbar .flex {
+    justify-content: space-between;
+}
+
+.navbar input {
+    height: auto;
+    border: none;
+    background-color: #f5f5f5;
+    padding: 10px 50px 10px 10px;
+    border-radius: 5px;
+}
+
+
+/* Intro */
+
+.introduction .grid {
+    gap: 30%;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+
+/* Distributors banner */
+
+.distributors {
+    background-color: var(--primary-color);
+}
+
+.distributors li img {
+    margin: 5px 0;
+    width: 40px;
+    display: block;
+}
+
+.distributors li {
+    max-height: 90%;
+    font-size: 12px;
+    margin: 20px 20px;
+    border: 1px solid #bed8d1;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+
+/* Learn with Fund Guru */
+
+.fund-guru .grid {
+    gap: 30%;
+}
+
+.fund-guru li::before {
+    content: url(/assets/ok.svg);
+    margin-right: 20px;
+}
+
+
+/* ask-the-expert */
+
+.ask-the-expert {
+    padding-top: 10%;
+    background-image: linear-gradient(#e4faf4, #f7f7f7);
+}
+
+.ask-the-expert .grid {
+    gap: 10%;
+}
+
+.ask-the-expert .left img {
+    padding: 10px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    width: 50px;
+}
+
+.expert-img {
+    max-height: 80vh;
+    padding: 10px;
+}
+
+.ask-the-expert .flex {
+    flex-direction: column;
+    margin: 10% 0 5% 0px;
+}
+
+
+/* Footer */
+
+.footer nav {
+    grid-template-columns: 1fr;
+}
+
+.footer .flex {
+    justify-content: space-between;
+}
+
+.footer li {
+    margin: 10px 0;
+}
+
+.footer-legal {
+    grid-column: 1/ span 2;
+    border-top: 2px solid gray;
+}
+
+.footer-legal {
+    justify-content: space-around;
+}
+
+.footer-legal li {
+    margin: 0px 20px;
+}
+
+
+/* Mobile */
+
+@media (max-width:500px) {
+    .introduction .grid,
+    .distributors .grid,
+    .fund-guru .grid,
+    .ask-the-expert .grid,
+    .footer .grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .hero-img,
+    .expert-img,
+    .top-header-bar,
+    .navbar ul {
+        display: none;
+    }
+    .ask-the-expert,
+    .distributors {
+        margin: 8%;
+    }
+    .ask-the-expert .flex {
+        text-align: center;
+        margin: 10%;
+    }
+}
